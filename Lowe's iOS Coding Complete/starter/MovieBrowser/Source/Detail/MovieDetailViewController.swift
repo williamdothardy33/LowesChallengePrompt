@@ -19,7 +19,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var overviewLabel: UILabel!
     
     var vm: MovieVM?
-    var movieImage: UIImage? {
+    private var movieImage: UIImage? {
         didSet {
             DispatchQueue.main.async {
                 self.posterImage.image = self.movieImage

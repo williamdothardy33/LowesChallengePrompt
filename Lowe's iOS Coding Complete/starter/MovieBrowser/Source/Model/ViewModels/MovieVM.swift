@@ -8,7 +8,7 @@
 
 import Foundation
 class MovieVM {
-    var movie: Movie
+    private var movie: Movie
     
     var title: String {
         movie.title ?? "default title"

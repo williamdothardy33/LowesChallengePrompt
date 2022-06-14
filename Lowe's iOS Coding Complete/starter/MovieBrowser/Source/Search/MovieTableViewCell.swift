@@ -29,7 +29,7 @@ class MovieTableViewCell: UITableViewCell {
         self.vm = vm
     }
     
-    func updateCell() {
+    private func updateCell() {
         DispatchQueue.main.async {
             self.titleLabel.text = self.vm?.title
             self.releaseLabel.text = self.vm?.releasedDateSearch

@@ -28,7 +28,7 @@ class MoviesVM {
     var isFetching = false
     var page: Int? = 1
     var totalPages: Int?
-    var movies: [MovieVM]? {
+    private(set) var movies: [MovieVM]? {
         didSet {
             handleModelChange()
         }

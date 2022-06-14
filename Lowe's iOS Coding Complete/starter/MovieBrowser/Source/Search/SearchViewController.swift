@@ -9,9 +9,7 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-    
-    var queryResource: MoviesResource?
-    
+
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var searchField: UISearchBar!
@@ -23,7 +21,7 @@ class SearchViewController: UIViewController {
         }
     }
     
-    func queryMovieList(query: String) {
+    private func queryMovieList(query: String) {
         self.vm.isFetching = false
         self.vm.queryResource = MoviesResource().addQueryParameter(key: "query", value: query).addQueryParameter(key: "page", value: "1")
     }
